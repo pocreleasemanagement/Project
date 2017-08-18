@@ -1,0 +1,112 @@
+
+<div class="pad10"><a href="#" md-button (click)="openDialog()"  data-toggle="modal" data-target="#AddUser"
+     class="pull-right pad10"><span class="glyphicon glyphicon-plus"></span></a></div>
+
+<div style="margin: auto; max-width: auto; margin-bottom: 50px;">
+    <data-table id="persons-grid"
+        headerTitle="Releases"
+        [items]="items"
+        [itemCount]="itemCount"
+        (reload)="reloadItems($event)"
+
+        (rowClick)="rowClick($event)"
+        (rowDoubleClick)="rowDoubleClick($event)"
+        [rowTooltip]="rowTooltip"
+        >
+        <data-table-column
+            [property]="'ProjectId'"
+            [header]="'Project'"
+            [sortable]="true"
+            [resizable]="true">
+        </data-table-column>
+        <data-table-column
+            [property]="'Summary'"
+            [header]="'Summary'"
+            [sortable]="true"
+            [resizable]="true">
+        </data-table-column>
+                <data-table-column
+            [property]="'ReleaseStartDate'"
+            [header]="'ReleaseStartDate'"
+            [sortable]="true"
+            [resizable]="true">
+            <template #dataTableCell let-item="item">
+                <span>{{item.ReleaseStartDate | date:'yyyy-MM-dd'}}</span>
+            </template>
+        </data-table-column>
+                <data-table-column
+            [property]="'ReleaseEndDate'"
+            [header]="'ReleaseEndDate'"
+            [sortable]="true"
+            [resizable]="true">
+            <template #dataTableCell let-item="item">
+                <span>{{item.ReleaseEndDate | date:'yyyy-MM-dd'}}</span>
+            </template>
+        </data-table-column>
+        <data-table-column
+            property="Brand"
+            header="Brand"
+            width="150px"
+             [sortable]="true"
+            [resizable]="true">
+        </data-table-column>
+             <data-table-column
+            [property]="'BusinessService'"
+            [header]="'BusinessService'"
+             [sortable]="true"
+            [resizable]="true">
+        </data-table-column>
+                    <data-table-column
+            [property]="'DeploymentTime'"
+            [header]="'DeploymentTime'"
+            [sortable]="true"
+            [resizable]="true">
+        </data-table-column>
+                    <data-table-column
+            [property]="'TestingTime'"
+            [header]="'TestingTime'"
+            [sortable]="true"
+            [resizable]="true">
+        </data-table-column>
+                    <data-table-column
+            [property]="'Outage'"
+            [header]="'Outage'"
+            [sortable]="true"
+            [resizable]="true">
+        </data-table-column>
+        <data-table-column
+            [property]="'DeploymentDuration'"
+            [header]="'DeploymentDuration'"
+            [sortable]="true"
+            [resizable]="true">
+        </data-table-column>
+        <data-table-column
+            [property]="'SanityDuration'"
+            [header]="'SanityDuration'"
+            [sortable]="true"
+            [resizable]="true">
+        </data-table-column>
+        <data-table-column
+            [property]="'Status'"
+            [header]="'Status'"
+            [width]="100"
+            [resizable]="true">
+            <template #dataTableHeader let-item="item">
+                <span style="color: rgb(232, 0, 0)">Status</span>
+            </template>
+            <template #dataTableCell let-item="item">
+                <span style="color: grey">
+                <span class="glyphicon glyphicon-ok" *ngIf="item.Status=='New'"></span>
+                <span class="glyphicon glyphicon-remove" *ngIf="item.Status=='InProgress'"></span>
+                <span class="glyphicon glyphicon-remove" *ngIf="item.Status=='Success'"></span>
+                <span class="glyphicon glyphicon-remove" *ngIf="item.Status=='Fail'"></span>
+                </span>
+            </template>
+        </data-table-column>
+    </data-table>
+</div>
+
+
+
+
+ 

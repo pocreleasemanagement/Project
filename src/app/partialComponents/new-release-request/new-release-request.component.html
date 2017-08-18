@@ -1,0 +1,119 @@
+<div>
+  <div id="AddNewRequest" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
+   <div class="modal-dialog modal-lg" role="document">
+     <form (ngSubmit)="onSubmit()"  #releaseForm="ngForm">
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" (click)="closeForm()" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+         <h4 class="modal-title" id="myModalLabel">Add New Request</h4>
+       </div>
+       <div class="modal-body">
+         <div class="pad30">
+               
+               <div class="row">
+         <div class="form-group row">
+         <label htmlFor="txtProjectId" class="col-md-2 col-form-control">Project</label>
+         <div class="col-md-10">
+         <input type="text" required [(ngModel)]="model.ProjectId" class="form-control" 
+         placeholder="Enter Project Id" id="txtProjectId" name="projectid"/>
+         </div>
+         </div>
+
+         <div class="form-group row">
+         <label htmlFor="txtSummary"  class="col-md-2 col-form-control">Summary</label>
+         <div class="col-md-10">
+         <input type="text" [(ngModel)]="model.Summary" id="txtSummary" class="form-control"
+          placeholder="Enter Summary" name="Summary"/>
+         </div>
+         </div>
+
+         <div class="form-group row">
+          <label htmlFor="txtSummary"  class="col-md-2 col-form-control">Summary</label>
+          <div class="col-md-10">
+          <input type="date" [(ngModel)]="model.ReleaseStartDate" id="txtSummary" class="form-control"
+           placeholder="Enter Summary" name="ReleaseStartDate"/>
+          </div>
+          </div>
+
+          <div class="form-group row">
+            <label htmlFor="txtSummary"  class="col-md-2 col-form-control">Summary</label>
+            <div class="col-md-10">
+            <input type="date" [(ngModel)]="model.ReleaseEndDate" id="txtSummary" class="form-control"
+             placeholder="Enter Summary" name="ReleaseEndDate"/>
+            </div>
+            </div>
+
+         <div class="form-group row">
+         <label htmlFor="txtBrand"  class="col-md-2 col-form-control">Brand</label>
+         <div class="col-md-10">
+         <input type="text" [(ngModel)]="model.Brand" id="txtBrand" class="form-control" placeholder="Enter Brand" name="Brand"/>
+         </div>
+         </div>
+         <div class="form-group row">
+          <label htmlFor="txtBrand"  class="col-md-2 col-form-control">Deployment Time</label>
+          <div class="col-md-10">
+            <ngb-timepicker name="two" [(ngModel)]="model.DeploymentTime"></ngb-timepicker>
+          </div>
+          </div>
+
+          <div class="form-group row">
+            <label htmlFor="txtBrand"  class="col-md-2 col-form-control">Testing Time</label>
+            <div class="col-md-10">
+              <ngb-timepicker name="one" [(ngModel)]="model.TestingTime"></ngb-timepicker>
+            </div>
+            </div>
+
+
+
+
+            <div class="form-group row">
+              <label htmlFor="txtBrand"  class="col-md-2 col-form-control">BusinessService</label>
+              <div class="col-md-10">
+              <input type="text" [(ngModel)]="model.BusinessService" id="txtBrand" class="form-control" placeholder="Enter BusinessService" name="BusinessService"/>
+              </div>
+              </div>
+
+
+              <div class="form-group row">
+                <label htmlFor="txtBrand"  class="col-md-2 col-form-control">Outage</label>
+                <div class="col-md-10">
+                <input type="text" [(ngModel)]="model.Outage" id="txtBrand" class="form-control" placeholder="Enter Outage" name="Outage"/>
+                </div>
+                </div>
+
+
+                <div class="form-group row">
+                  <label htmlFor="txtBrand"  class="col-md-2 col-form-control">DeploymentDuration</label>
+                  <div class="col-md-10">
+                  <input type="number" [(ngModel)]="model.DeploymentDuration" id="txtBrand" class="form-control" placeholder="Enter DeploymentDuration" name="Outage"/>
+                  </div>
+                  </div>
+
+
+                  <div class="form-group row">
+                    <label htmlFor="txtBrand"  class="col-md-2 col-form-control">SanityDuration</label>
+                    <div class="col-md-10">
+                    <input type="number" [(ngModel)]="model.SanityDuration" id="txtBrand" class="form-control" placeholder="Enter SanityDuration" name="Outage"/>
+                    </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label htmlFor="txtBrand"  class="col-md-2 col-form-control">Status</label>
+                      <div class="col-md-10">
+                      <input type="text" [(ngModel)]="model.Status" id="txtBrand" class="form-control" placeholder="Enter Status" name="Outage"/>
+                      </div>
+                      </div>
+  
+
+               </div>
+         </div>
+       </div>
+       <div class="modal-footer">
+         <button type="submit" class="btn btn-primary pull-left" [disabled]="!releaseForm.form.valid">Save changes</button>
+         <button type="button" class="btn btn-default" id="btnclose" data-dismiss="modal" (click)="closeForm()" ref='closebtn' >Close</button>
+       </div>
+     </div>
+       </form>
+   </div>
+ </div>
+ </div>
