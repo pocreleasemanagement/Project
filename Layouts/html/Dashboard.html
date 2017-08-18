@@ -1,0 +1,414 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" type="image/png" href="images/favicon.ico" />
+<title>Ladbrokes Betting &amp; Gaming Ltd</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!--//-->
+<!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+     <![endif]-->
+<!--//-->
+<link href="css/admin-style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+</head>
+<body id="top">
+<div class="bgtop">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="navbar" role="navigation">
+					<div class="navbar-header"> <a class="navbar-brand" href="index.html"><img src="images/ladbrokes-logo.png" alt="logo"></a> </div>
+					<ul class="nav navbar-nav nav-main navbar-right">
+						<li class="pad10">
+							<div class="dropdown"><span class="badge">5</span> <a href="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="user-placeholder"></span></a>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+									<li><a href="#"><span class="glyphicon glyphicon-user"></span> Hi, User</a></li>
+									<li role="separator" class="divider"></li>
+									<li><a href="#"><span class="glyphicon glyphicon-info-sign"></span> Account Info</a></li>
+									<li><a href="#"><span class="glyphicon glyphicon-wrench"></span> Settings</a></li>
+									<li><a href="index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-6">
+				<button type="button" class="hamburger is-closed mar200 pull-left" data-toggle="offcanvas"> <span class="hamb-top"></span> <span class="hamb-middle"></span> <span class="hamb-bottom"></span> </button>
+				<div class="tab-main-outer">
+					<ul class="nav nav-tabs">
+						<li role="presentation" class="active"><a href="#Dashboard" aria-controls="Dashboard" role="tab" data-toggle="tab">Dashboard</a></li>
+						<li role="presentation"><a href="#Log" aria-controls="Log" role="tab" data-toggle="tab">Log</a></li>
+						<li role="presentation"><a href="#Ladbrokes" aria-controls="Ladbrokes" role="tab" data-toggle="tab">Ladbrokes</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="pad10"><a href="#AddDetails"  data-toggle="modal" data-target="#AddUser" class="pull-right pad10"><span class="glyphicon glyphicon-plus"></span></a></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="heightfixinside relative">
+	<div id="wrapper">
+		<nav class="nav " id="sidebar-wrapper" role="navigation">
+			<ul class="nav sidebar-nav">
+				<li> <a href="patientdetails.html"><span class="glyphicon glyphicon-user"></span> Main Menu 1</a> </li>
+				<li> <a href="notifications.html"><span class="glyphicon glyphicon-globe"></span> Main Menu 2</a> </li>
+			</ul>
+		</nav>
+		<div class="container-fluid" id="wrapper">
+			<div class="pad60">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane fade in active" id="Dashboard">
+								<h2>Table Style</h2>
+								<div class="box pad30 bgwhite table-responsive">
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>First Name</th>
+												<th>Last Name</th>
+												<th>Username</th>
+												<th>Edit</th>
+												<th>Delete</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">1</th>
+												<td>Mark</td>
+												<td>Otto</td>
+												<td>@mdo</td>
+												<td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#EditUser"><span class="glyphicon glyphicon-edit"></span></button></td>
+												<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteUser"><span class="glyphicon glyphicon-trash"></span></button></td>
+											</tr>
+											<tr>
+												<th scope="row">2</th>
+												<td>Jacob</td>
+												<td>Thornton</td>
+												<td>@fat</td>
+												<td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#EditUser"><span class="glyphicon glyphicon-edit"></span></button></td>
+												<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteUser"><span class="glyphicon glyphicon-trash"></span></button></td>
+											</tr>
+											<tr>
+												<th scope="row">3</th>
+												<td>Larry</td>
+												<td>the Bird</td>
+												<td>@twitter</td>
+												<td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#EditUser"><span class="glyphicon glyphicon-edit"></span></button></td>
+												<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteUser"><span class="glyphicon glyphicon-trash"></span></button></td>
+											</tr>
+																						<tr>
+												<th scope="row">3</th>
+												<td>Larry</td>
+												<td>the Bird</td>
+												<td>@twitter</td>
+												<td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#EditUser"><span class="glyphicon glyphicon-edit"></span></button></td>
+												<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteUser"><span class="glyphicon glyphicon-trash"></span></button></td>
+											</tr>
+																						<tr>
+												<th scope="row">3</th>
+												<td>Larry</td>
+												<td>the Bird</td>
+												<td>@twitter</td>
+												<td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#EditUser"><span class="glyphicon glyphicon-edit"></span></button></td>
+												<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteUser"><span class="glyphicon glyphicon-trash"></span></button></td>
+											</tr>											<tr>
+												<th scope="row">3</th>
+												<td>Larry</td>
+												<td>the Bird</td>
+												<td>@twitter</td>
+												<td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#EditUser"><span class="glyphicon glyphicon-edit"></span></button></td>
+												<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteUser"><span class="glyphicon glyphicon-trash"></span></button></td>
+											</tr>											<tr>
+												<th scope="row">3</th>
+												<td>Larry</td>
+												<td>the Bird</td>
+												<td>@twitter</td>
+												<td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#EditUser"><span class="glyphicon glyphicon-edit"></span></button></td>
+												<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteUser"><span class="glyphicon glyphicon-trash"></span></button></td>
+											</tr>											<tr>
+												<th scope="row">3</th>
+												<td>Larry</td>
+												<td>the Bird</td>
+												<td>@twitter</td>
+												<td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#EditUser"><span class="glyphicon glyphicon-edit"></span></button></td>
+												<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteUser"><span class="glyphicon glyphicon-trash"></span></button></td>
+											</tr>											<tr>
+												<th scope="row">3</th>
+												<td>Larry</td>
+												<td>the Bird</td>
+												<td>@twitter</td>
+												<td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#EditUser"><span class="glyphicon glyphicon-edit"></span></button></td>
+												<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteUser"><span class="glyphicon glyphicon-trash"></span></button></td>
+											</tr>											<tr>
+												<th scope="row">3</th>
+												<td>Larry</td>
+												<td>the Bird</td>
+												<td>@twitter</td>
+												<td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#EditUser"><span class="glyphicon glyphicon-edit"></span></button></td>
+												<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteUser"><span class="glyphicon glyphicon-trash"></span></button></td>
+											</tr>
+																						<tr>
+												<th scope="row">3</th>
+												<td>Larry</td>
+												<td>the Bird</td>
+												<td>@twitter</td>
+												<td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#EditUser"><span class="glyphicon glyphicon-edit"></span></button></td>
+												<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteUser"><span class="glyphicon glyphicon-trash"></span></button></td>
+											</tr>
+																						<tr>
+												<th scope="row">3</th>
+												<td>Larry</td>
+												<td>the Bird</td>
+												<td>@twitter</td>
+												<td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#EditUser"><span class="glyphicon glyphicon-edit"></span></button></td>
+												<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteUser"><span class="glyphicon glyphicon-trash"></span></button></td>
+											</tr>
+																						<tr>
+												<th scope="row">3</th>
+												<td>Larry</td>
+												<td>the Bird</td>
+												<td>@twitter</td>
+												<td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#EditUser"><span class="glyphicon glyphicon-edit"></span></button></td>
+												<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteUser"><span class="glyphicon glyphicon-trash"></span></button></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="Log">
+								<form>
+									<h2>Form Style</h2>
+									<div class="box clearfix">
+										<div class="form-group col-md-4">
+											<label>User Name</label>
+											<input class="form-control" required="" type="text">
+										</div>
+										<div class="form-group col-md-4">
+											<label>Surname</label>
+											<input class="form-control" required="" type="text">
+										</div>
+										<div class="form-group col-md-4">
+											<label>select</label>
+											<select class="form-control" required="">
+												<option>Select</option>
+											</select>
+										</div>
+										<div class="clearfix"></div>
+										<div class="form-group col-md-4">
+											<label>Address</label>
+											<input class="form-control" required="" type="text">
+										</div>
+										<div class="form-group col-md-4">
+											<label>&nbsp;</label>
+											<input class="form-control" required="" type="text">
+										</div>
+										<div class="form-group col-md-2">
+											<label>&nbsp;</label>
+											<input class="form-control" required="" type="text">
+										</div>
+										<div class="form-group col-md-2">
+											<label>Pin Code</label>
+											<input class="form-control" required="" type="text">
+										</div>
+										<div class="form-group col-md-4">
+											<label>Telephone:</label>
+											<input class="form-control" required="" type="text">
+										</div>
+										<div class="form-group col-md-4">
+											<label>Mobile</label>
+											<input class="form-control" required="" type="text">
+										</div>
+										<div class="form-group col-md-4">
+											<label>Email</label>
+											<input class="form-control" required="" type="text">
+										</div>
+										<div class="form-group col-md-12">
+											<label>Days</label>
+											<div>
+												<label class="checkbox-inline">
+													<input type="checkbox" id="inlineCheckbox1" value="option1">
+													Mo </label>
+												<label class="checkbox-inline">
+													<input type="checkbox" id="inlineCheckbox2" value="option2">
+													Tu </label>
+												<label class="checkbox-inline">
+													<input type="checkbox" id="inlineCheckbox3" value="option3">
+													We </label>
+												<label class="checkbox-inline">
+													<input type="checkbox" id="inlineCheckbox3" value="option3">
+													Th </label>
+												<label class="checkbox-inline">
+													<input type="checkbox" id="inlineCheckbox3" value="option3">
+													Fr </label>
+												<label class="checkbox-inline">
+													<input type="checkbox" id="inlineCheckbox3" value="option3">
+													Sa </label>
+												<label class="checkbox-inline">
+													<input type="checkbox" id="inlineCheckbox3" value="option3">
+													Su </label>
+											</div>
+										</div>
+									</div>
+									<div class="box clearfix">
+										<div  class="col-md-12">
+											<button type="button" class="btn btn-primary">Register</button>
+											<button type="button" class="btn btn-default pull-right" data-dismiss="modal">Back</button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="Ladbrokes">Ladbrokes</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer>
+	<p class="mar0">&copy; 2017  Ladbrokes Betting & Gaming Ltd. All Rights Reserved.</p>
+</footer>
+<!-- Modal -->
+<div class="modal fade" id="DeleteUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Are you sure?</h4>
+			</div>
+			<div class="modal-body">
+				<h3>You want to delete user?</h3>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger pull-left">Delete</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="EditUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Edit Details</h4>
+			</div>
+			<div class="modal-body">
+				<div class="pad30">
+					<form>
+						<div class="form-group">
+							<label>First Name</label>
+							<input class="form-control" required="" type="text">
+						</div>
+						<div class="form-group">
+							<label>Last Name</label>
+							<input class="form-control" required="" type="text">
+						</div>
+						<div class="form-group">
+							<label>User Name</label>
+							<input class="form-control" required="" type="text">
+						</div>
+						<div class="form-group">
+							<label>Notes</label>
+							<textarea class="form-control txtarea"></textarea>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary pull-left">Save changes</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="AddUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Add User</h4>
+			</div>
+			<div class="modal-body">
+				<div class="pad30">
+					<form>
+						<div class="row">
+							<div class="form-group col-md-6">
+								<label>First Name</label>
+								<input class="form-control" required="" type="text">
+							</div>
+							<div class="form-group col-md-6">
+								<label>Last Name</label>
+								<input class="form-control" required="" type="text">
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-group col-md-6">
+								<label>Phone No</label>
+								<input class="form-control" required="" type="text">
+							</div>
+							<div class="form-group col-md-6">
+								<label>Email</label>
+								<input class="form-control" required="" type="text">
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<label>Notes</label>
+									<textarea class="form-control txtarea"></textarea>
+								</div>
+								<div class="form-group">
+									<label>Gender</label>
+									<div>
+										<label class="radio-inline">
+											<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+											M </label>
+										<label class="radio-inline">
+											<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+											F </label>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>Type of Service</label>
+									<div>
+										<label class="checkbox-inline">
+											<input type="checkbox" id="inlineCheckbox1" value="option1">
+											1 </label>
+										<label class="checkbox-inline">
+											<input type="checkbox" id="inlineCheckbox2" value="option2">
+											2 </label>
+										<label class="checkbox-inline">
+											<input type="checkbox" id="inlineCheckbox3" value="option3">
+											3 </label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary pull-left">Save changes</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
