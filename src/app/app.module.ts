@@ -6,7 +6,8 @@ import { DataTableModule } from 'angular-2-data-table';
 import { MdDialogModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-
+import { DataServiceService } from './data-service.service';
+import { AppDashboard } from './app.dashboard';
 import { ContainerComponent } from './container/container.component';
 import { MyqueueComponent } from './myqueue/myqueue.component';
 import { ReleaseboardComponent } from './releaseboard/releaseboard.component';
@@ -27,6 +28,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     { provide: APP_BASE_HREF, useValue: '/'}],
   declarations: [
     AppComponent,
+     AppDashboard,
     ContainerComponent,
     MyqueueComponent,
     ReleaseboardComponent,

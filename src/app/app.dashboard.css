@@ -1,0 +1,11 @@
+.table-div {display: table; width: 100%}
+.table-row {display: table-row}
+.table-cell {display: table-cell}
+
+.div-flex-col {display: flex; flex-direction: column}
+.div-flex-row {display: flex; flex-direction: row}
+.div-flex-col>div{ padding: 10px; border-bottom: 1px solid #333; height: 60px}
+
+
+
+
