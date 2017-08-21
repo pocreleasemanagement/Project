@@ -18,6 +18,7 @@ import { NewReleaseRequestComponent } from '../app/partialComponents/new-release
 import { DateTimePickerModule } from 'ng-pick-datetime';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { MeetingCardComponent } from './meeting-card/meeting-card.component';
 
 
 @NgModule({
@@ -25,15 +26,16 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     NewReleaseRequestComponent
   ],
    providers : [
-    { provide: APP_BASE_HREF, useValue: '/'}],
+    { provide: APP_BASE_HREF, useValue: '/'},DataServiceService],
   declarations: [
     AppComponent,
      AppDashboard,
-    ContainerComponent,
+   ContainerComponent,
     MyqueueComponent,
     ReleaseboardComponent,
     DataTableDemo1RemoteComponent,
-    NewReleaseRequestComponent
+    NewReleaseRequestComponent,
+    MeetingCardComponent
 ],
   imports: [
     BrowserModule,
@@ -46,6 +48,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     DateTimePickerModule,
     NgbModule.forRoot()
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppDashboard]
 })
 export class AppModule { }

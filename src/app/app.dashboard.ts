@@ -15,6 +15,7 @@ export class AppDashboard {
   counter=0;
 
   onClick(): void {
+    debugger
    this.counter=this.counter+7;
    this.getNext(moment().add('days',this.counter).format("YYYY-MM-DD"));
   }
@@ -36,11 +37,11 @@ export class AppDashboard {
            this.Time=[];
          this.test.forEach(element => {
           if (this.Release.length==0){
-              this.Release=[{id: moment(element.ReleaseStartDate).day(),name:element.Summary,ReleaseDt:element.ReleaseStartDate,detail:{fromTime:moment(element.ReleaseStartDate).format("HH"),totime:11}}];
+              this.Release=[{id: moment(element.ReleaseStartDate).day(),status:element.status,name:element.Summary,ReleaseDt:element.ReleaseStartDate,detail:{fromTime:moment(element.ReleaseStartDate).format("HH"),totime:11}}];
           }
           else
               {
-              this.Release.push({id: moment(element.ReleaseStartDate).day(),name:element.Summary,ReleaseDt:element.ReleaseStartDate,detail:{fromTime:moment(element.ReleaseStartDate).format("HH"),totime:11}});
+              this.Release.push({id: moment(element.ReleaseStartDate).day(),status:element.status,name:element.Summary,ReleaseDt:element.ReleaseStartDate,detail:{fromTime:moment(element.ReleaseStartDate).format("HH"),totime:11}});
               this.Time.push({id:cnt.toString(),name:moment(element.ReleaseStartDate).format("HH")});
               }
           cnt++;
@@ -51,6 +52,7 @@ export class AppDashboard {
   this.Time=[];
   var endValue=fromtm[fromtm.length-1];
   var startValue=fromtm[0];
+  debugger
   for(let i = startValue; i <= endValue; ++i) {
                var test="0"+i.toString();
 
@@ -76,21 +78,23 @@ export class AppDashboard {
     );
    }
    public getTimeDetail(id,hour){
-      let releaseName: string = this._myService.getTimeDetail(id,hour);
-     let isAvail = false;
-     if (releaseName != null) {
-     isAvail = true;
-     }
-      return { 'releaseName': releaseName, 'isAvail': isAvail };
-   }
+     var result = this._myService.getTimeDetail(id,hour);
+     debugger
+     var output=[];
+              result.forEach(element => {
+                if (output.length==0)
+                  output=[{releaseName:element.name,class:'active',color:'yellow',status:element.status,isAvail:true,ReleaseDt:element.ReleaseDt}];
+                else
+                output.push({releaseName:element.name,class:'',color:'red',status:element.status,isAvail:true,ReleaseDt:element.ReleaseDt});
 
-     public getCount(id,hour){
-      let releaseName: string = this._myService.getTimeDetail(id,hour);
-     let isAvail = false;
-     if (releaseName != null) {
-     isAvail = true;
-     }
-      return { 'releaseName': releaseName, 'isAvail': isAvail };
+              });
+              return output;
+    }
+
+     public getCount(id){
+      let releaseCount = this._myService.getCount(id);
+     
+      return releaseCount;
    }
   ngOnInit() {
 

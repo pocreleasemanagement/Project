@@ -13,110 +13,48 @@
                                 <div class="tabel-calender-cell"></div>
                                 <div *ngFor="let sb of WeekDay; let j=index" class="tabel-calender-cell">
                                     {{sb.name}}
-                                    <div class="total-number blink_me">1</div>
+                                    <div class="total-number blink_me">{{getCount(sb.id)}}</div>
                                 </div>
                             </div>
                             <div class="table-calender-row" *ngFor="let tm of Time; let i=index">
                                 <div class="tabel-calender-cell">{{tm.name}}</div>
                                 <div class="tabel-calender-cell">
-                                    <div class="carousel carousel-card slide" data-ride="carousel">
-                                        <div class="carousel-inner" role="listbox">
-                                        
-                                         <div class="item active" *ngIf="getTimeDetail(1,tm.name).isAvail ==true">
-                                          <div class="card yellow" >
-                                                    <div>
-                                                        <p>{{getTimeDetail(1,tm.name).releaseName}}</p>
-                                                    </div>
-                                        </div>
-                                            </div>
-                                     </div>
+                                        <app-meeting-card [parentID]="1" [timeName]=tm.name ></app-meeting-card>
                                     </div>
+                               
+                                   <div class="tabel-calender-cell">
+                              
+                            
+                                    <app-meeting-card [parentID]="2" [timeName]=tm.name ></app-meeting-card>
+                                   
                                 </div>
-                                <div class="tabel-calender-cell">
-                                                <div class="carousel carousel-card slide" data-ride="carousel">
-                                        <div class="carousel-inner" role="listbox">
-                                        
-                                         <div class="item active" *ngIf="getTimeDetail(2,tm.name).isAvail ==true">
-                                          <div class="card yellow" >
-                                                    <div>
-                                                        <p>{{getTimeDetail(2,tm.name).releaseName}}</p>
-                                                    </div>
-                                        </div>
-                                            </div>
-                                     </div>
-                                    </div>
+                                    <div class="tabel-calender-cell">
+                                   
+                              
+                                    <app-meeting-card [parentID]="3" [timeName]=tm.name ></app-meeting-card>
+                              
                                 </div>
-                                <div class="tabel-calender-cell">
-                                                <div class="carousel carousel-card slide" data-ride="carousel">
-                                        <div class="carousel-inner" role="listbox">
-                                        
-                                         <div class="item active" *ngIf="getTimeDetail(3,tm.name).isAvail ==true">
-                                          <div class="card yellow" >
-                                                    <div>
-                                                        <p>{{getTimeDetail(3,tm.name).releaseName}}</p>
-                                                    </div>
-                                        </div>
-                                            </div>
-                                     </div>
-                                    </div>
+                                    <div class="tabel-calender-cell">
+                                       
+                                    <app-meeting-card [parentID]="4" [timeName]=tm.name ></app-meeting-card>
+                                  
                                 </div>
-                                <div class="tabel-calender-cell">
-                                                <div class="carousel carousel-card slide" data-ride="carousel">
-                                        <div class="carousel-inner" role="listbox">
-                                        
-                                         <div class="item active" *ngIf="getTimeDetail(4,tm.name).isAvail ==true">
-                                          <div class="card yellow" >
-                                                    <div>
-                                                        <p>{{getTimeDetail(4,tm.name).releaseName}}</p>
-                                                    </div>
-                                        </div>
-                                            </div>
-                                     </div>
-                                    </div>
+                                    <div class="tabel-calender-cell">
+                                       
+                                    <app-meeting-card [parentID]="5" [timeName]=tm.name ></app-meeting-card>
+                                    
                                 </div>
-                                <div class="tabel-calender-cell">
-                                                <div class="carousel carousel-card slide" data-ride="carousel">
-                                        <div class="carousel-inner" role="listbox">
-                                        
-                                         <div class="item active" *ngIf="getTimeDetail(5,tm.name).isAvail ==true">
-                                          <div class="card yellow" >
-                                                    <div>
-                                                        <p>{{getTimeDetail(5,tm.name).releaseName}}</p>
-                                                    </div>
-                                        </div>
-                                            </div>
-                                     </div>
-                                    </div>
+                                    <div class="tabel-calender-cell">
+                                       
+                                    <app-meeting-card [parentID]="6" [timeName]=tm.name ></app-meeting-card>
+                                   
                                 </div>
-                                <div class="tabel-calender-cell">
-                                                <div class="carousel carousel-card slide" data-ride="carousel">
-                                        <div class="carousel-inner" role="listbox">
-                                        
-                                         <div class="item active" *ngIf="getTimeDetail(6,tm.name).isAvail ==true">
-                                          <div class="card yellow" >
-                                                    <div>
-                                                        <p>{{getTimeDetail(6,tm.name).releaseName}}</p>
-                                                    </div>
-                                        </div>
-                                            </div>
-                                     </div>
-                                    </div>
+                                  <div class="tabel-calender-cell">
+                                      
+                                    <app-meeting-card [parentID]="0" [timeName]=tm.name ></app-meeting-card>
+                                   
+                              </div>
                                 </div>
-                                <div class="tabel-calender-cell">
-                                                <div class="carousel carousel-card slide" data-ride="carousel">
-                                        <div class="carousel-inner" role="listbox">
-                                        
-                                         <div class="item active" *ngIf="getTimeDetail(0,tm.name).isAvail ==true">
-                                          <div class="card yellow" >
-                                                    <div>
-                                                        <p>{{getTimeDetail(0,tm.name).releaseName}}</p>
-                                                    </div>
-                                        </div>
-                                            </div>
-                                     </div>
-                                    </div>
-                                </div>
-                            </div>
          
 
                         </div>

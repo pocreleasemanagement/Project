@@ -30,9 +30,15 @@ public getTimeDetail(id,hour){
   var print;
      var result=this.Release.filter(x => x.id==id && x.detail.fromTime==hour);
     if(result.length>0)
-     print=result[0].name
+     print=result;
   
 return print;
 }
+  public getCount(id){
+  debugger
+  var result=this.Release.filter(x => x.id==id ).length;
+   
   
+return result;
+}
 }

@@ -1,0 +1,13 @@
+ <div class="carousel  slide"   data-ride="carousel" data-interval="10000">
+                                        <div class="carousel-inner"  role="listbox">
+                                
+                                        
+                                         <div class="item active" *ngFor="let sb of test; let j=index" >
+                                          <div class="card " [ngClass]="sb.color" >
+                                                    <div>
+                                                        <p>{{sb.releaseName}}</p>
+                                                    </div>
+                                        </div>
+                                            </div>
+                                     </div>
+                                            </div>
