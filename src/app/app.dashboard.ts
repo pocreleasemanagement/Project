@@ -36,12 +36,13 @@ export class AppDashboard {
         this.Release=[];
            this.Time=[];
          this.test.forEach(element => {
+           debugger
           if (this.Release.length==0){
-              this.Release=[{id: moment(element.ReleaseStartDate).day(),status:element.status,name:element.Summary,ReleaseDt:element.ReleaseStartDate,detail:{fromTime:moment(element.ReleaseStartDate).format("HH"),totime:11}}];
+              this.Release=[{id: moment(element.ReleaseStartDate).day(),status:element.Status,name:element.Summary,ReleaseDt:element.ReleaseStartDate,detail:{fromTime:moment(element.ReleaseStartDate).format("HH"),totime:11}}];
           }
           else
               {
-              this.Release.push({id: moment(element.ReleaseStartDate).day(),status:element.status,name:element.Summary,ReleaseDt:element.ReleaseStartDate,detail:{fromTime:moment(element.ReleaseStartDate).format("HH"),totime:11}});
+              this.Release.push({id: moment(element.ReleaseStartDate).day(),status:element.Status,name:element.Summary,ReleaseDt:element.ReleaseStartDate,detail:{fromTime:moment(element.ReleaseStartDate).format("HH"),totime:11}});
               this.Time.push({id:cnt.toString(),name:moment(element.ReleaseStartDate).format("HH")});
               }
           cnt++;

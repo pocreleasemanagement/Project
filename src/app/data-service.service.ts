@@ -13,7 +13,7 @@ export class DataServiceService {
  public Time=[{id:"1",name:"10"},{id:"2",name:"11"},{id:"3",name:"12"},{id:"4",name:"13"},{id:"5",name:"14"},{id:"7",name:"15"}];
   
   public getReleaseData(dt) {
-    debugger
+    
     return this.http.get( this.baseApi+dt).map(response => response.json());
   }
    public getData(){
@@ -26,7 +26,6 @@ export class DataServiceService {
   return this.weekDays;
   }
 public getTimeDetail(id,hour){
-  debugger
   var print;
      var result=this.Release.filter(x => x.id==id && x.detail.fromTime==hour);
     if(result.length>0)
@@ -35,7 +34,6 @@ public getTimeDetail(id,hour){
 return print;
 }
   public getCount(id){
-  debugger
   var result=this.Release.filter(x => x.id==id ).length;
    
   
