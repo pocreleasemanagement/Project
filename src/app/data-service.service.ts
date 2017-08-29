@@ -8,7 +8,7 @@ export class DataServiceService {
  constructor(private http: Http) { }
  public test:any;
  public baseApi = 'http://releasemanagementapi.azurewebsites.net/api/findrelease/';
- public weekDays=[{id:1,name:'MON'},{id:2,name:'TUE'},{id:3,name:'WED'},{id:4,name:'THU'},{id:5,name:'FRI'},{id:6,name:'SAT'},{id:0,name:'SUN'}];
+ public weekDays=[{id:1,name:'MON',dt:null},{id:2,name:'TUE',dt:null},{id:3,name:'WED',dt:null},{id:4,name:'THU',dt:null},{id:5,name:'FRI',dt:null},{id:6,name:'SAT',dt:null},{id:0,name:'SUN',dt:null}];
  public Release=[ ];
  public Time=[{id:"1",name:"10"},{id:"2",name:"11"},{id:"3",name:"12"},{id:"4",name:"13"},{id:"5",name:"14"},{id:"7",name:"15"}];
   

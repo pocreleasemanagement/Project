@@ -12,7 +12,7 @@
                             <div class="table-calender-row bgdark">
                                 <div class="tabel-calender-cell"></div>
                                 <div *ngFor="let sb of WeekDay; let j=index" class="tabel-calender-cell">
-                                    {{sb.name}}
+                                    {{sb.name}}({{sb.dt}})
                                     <div class="total-number blink_me">{{getCount(sb.id)}}</div>
                                 </div>
                             </div>
