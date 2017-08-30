@@ -1,47 +1,57 @@
-
+﻿
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="icon" type="image/png" href="assets/images/favicon.ico" />
-<title>Ladbrokes Betting &amp; Gaming Ltd</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="assets/images/favicon.ico" />
+    <title>Ladbrokes Betting &amp; Gaming Ltd</title>
 
-<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <script src="node_modules/core-js/client/shim.min.js"></script>
 
     <script src="node_modules/zone.js/dist/zone.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <link rel="stylesheet"
-    href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
 
     <link rel="stylesheet" type="text/css" href="/node_modules/ng-pick-datetime/styles/picker.min.css" />
-    
-<!--//-->
-<!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-     <![endif]-->
-<!--//-->
-<link href="assets/css/admin-style.css" rel="stylesheet">
-<!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet"> -->
-
-<!-- <script>
-        System.import('app').catch(function (err) { console.error(err); });
-    </script> -->
+    <style>
+        #wrapper { height: 100%; }
+            #wrapper > div { height: 90%; }
+    </style>
+    <!--//-->
+    <!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+         <![endif]-->
+    <!--//-->
+    <!--<link href="assets/css/admin-style.css" rel="stylesheet">-->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet"> -->
+    <!-- <script>
+            System.import('app').catch(function (err) { console.error(err); });
+        </script> -->
 </head>
 <body id="top">
- 
-<app-root></app-root>
-<footer>
-	<p class="mar0">&copy; 2017  Ladbrokes Betting & Gaming Ltd. All Rights Reserved.</p>
-</footer>
-<!-- Modal -->
- <script src="assets/js/jquery.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/scripts.js"></script> 
+    <div class="container-fluid" id="wrapper">
+        <div>
+            <app-root></app-root>
+        </div>
+        <footer class="">
+            <hr />
+            <p class="mar0 text-center">&copy; 2017  Ladbrokes Betting & Gaming Ltd. All Rights Reserved.</p>
+        </footer>
+    </div>
+    <!-- Modal -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#quote-carousel .carousel-indicators li:first").addClass("active");
+            $("#quote-carousel .carousel-inner .item:first").addClass("active");
+        });
+    </script>
 </body>
 </html>
-
