@@ -30,17 +30,18 @@ roleModel = new RoleModel();
           if(this.roleModel != null)
             {
               debugger;
-              localStorage.setItem('currentUser', JSON.stringify({ username: this.roleModel.Roles[0].Name}));
-              this.router.navigate(['/appDashBoard']);
+              localStorage.setItem('currentUser', JSON.stringify({ username: this.uname}));
+              //this.router.navigate(['/appDashBoard']);
+              // this.router.navigate(['/adminDashBoard']);
             //un coment below after implementing admin module
-            //   if (this.roleModel.Roles[0].Name.toLowerCase() != 'releasemanager')
-            //     {
-            //   this.router.navigate(['/appDashBoard']);
-            //     }
-            // else
-            //   {
-            //     // this.router.navigate(['/adminDashBoard']);
-            //   }
+              if (this.roleModel.Roles[0].Name.toLowerCase() != 'releasemanager')
+                {
+              this.router.navigate(['/appDashBoard']);
+                }
+            else
+              {
+                this.router.navigate(['/adminDashBoard']);
+              }
             }
           },         
            () => console.log('Request Completed'),

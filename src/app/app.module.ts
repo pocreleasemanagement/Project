@@ -19,15 +19,21 @@ import { DateTimePickerModule } from 'ng-pick-datetime';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { MeetingCardComponent } from './meeting-card/meeting-card.component';
+import { LandingComponent } from './landing/landing.component';
+import { LoginComponent } from './login/login.component';
 
+import { LoginService } from './login/login-Service/login.service';
+import { AuthGuard } from './login/AuthGuard';
 
 @NgModule({
   entryComponents : [
-    NewReleaseRequestComponent
+    LandingComponent
   ],
    providers : [
-    { provide: APP_BASE_HREF, useValue: '/'},DataServiceService],
+    { provide: APP_BASE_HREF, useValue: '/'},DataServiceService,LoginService,AuthGuard],
   declarations: [
+     LoginComponent,
+     LandingComponent,
     AppComponent,
      AppDashboard,
    ContainerComponent,
@@ -36,6 +42,8 @@ import { MeetingCardComponent } from './meeting-card/meeting-card.component';
     DataTableDemo1RemoteComponent,
     NewReleaseRequestComponent,
     MeetingCardComponent
+    
+    
 ],
   imports: [
     BrowserModule,
@@ -48,6 +56,6 @@ import { MeetingCardComponent } from './meeting-card/meeting-card.component';
     DateTimePickerModule,
     NgbModule.forRoot()
   ],
-  bootstrap: [AppDashboard]
+  bootstrap: [LandingComponent]
 })
 export class AppModule { }

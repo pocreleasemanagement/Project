@@ -5,7 +5,7 @@
 			<div class="col-md-6 col-md-offset-3">
 				<div class="loginouter form-large">
                     <div class="text-center">
-                        <img src="assets/images/ladbrokes-logo.png" alt="logo">
+                        <img src="./assets/images/ladbrokes-logo.png" alt="logo">
                         <h1 class="h3 pad300">Login</h1>
                     </div>
 					<form #loginForm="ngForm">
@@ -25,7 +25,9 @@
                                     <label>Password</label>
                                 </div>
 						</div>
+														
 							<button class="btn btn-primary btn-lg btn-block center-block" (click)="login()" [disabled]="!loginForm.valid" >Login</button>
+
 							</form>
 						
 						
@@ -38,6 +40,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- <app-roots></app-roots> -->
-	<!-- <router-outlet></router-outlet>	 -->
+<!-- <app-roots></app-roots> -->
+		   <!-- <router-outlet></router-outlet>  -->
 </div>
