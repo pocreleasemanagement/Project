@@ -37,14 +37,18 @@ export class AppDashboard {
            this.Time=[];
          this.test.forEach(element => {
            debugger
+            let itemIndex = this.WeekDay.findIndex(item => item.id ==  moment(element.ReleaseStartDate).day());
           if (this.Release.length==0){
               this.Release=[{id: moment(element.ReleaseStartDate).day(),status:element.Status,name:element.Summary,ReleaseDt:element.ReleaseStartDate,detail:{fromTime:moment(element.ReleaseStartDate).format("HH"),totime:11}}];
+              this.WeekDay[itemIndex].dt = moment(element.ReleaseStartDate).format("DD-MM-YYYY");
           }
           else
               {
               this.Release.push({id: moment(element.ReleaseStartDate).day(),status:element.Status,name:element.Summary,ReleaseDt:element.ReleaseStartDate,detail:{fromTime:moment(element.ReleaseStartDate).format("HH"),totime:11}});
               this.Time.push({id:cnt.toString(),name:moment(element.ReleaseStartDate).format("HH")});
               }
+           
+          this.WeekDay[itemIndex].dt = moment(element.ReleaseStartDate).format("DD-MM-YYYY");
           cnt++;
          });
         this._myService.Release=this.Release;

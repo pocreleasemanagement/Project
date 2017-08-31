@@ -1,56 +1,42 @@
-<div class="text-right">
-  <button type="submit" class="btn btn-primary" (click)="onClick()">Next</button>
-</div>
-<div class="heightfixinside relative">
-    <div class="container-fluid" id="wrapper">
-        <div class="pad60">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="box table-responsive">
-                        <h1 class="title">Digital Release Board <small>- Release Live Status and Metrics</small></h1>
-                        <div class="tabel-calender">
-                            <div class="table-calender-row bgdark">
-                                <div class="tabel-calender-cell"></div>
-                                <div *ngFor="let sb of WeekDay; let j=index" class="tabel-calender-cell">
-                                    {{sb.name}}
-                                    <div class="total-number blink_me">{{getCount(sb.id)}}</div>
-                                </div>
-                            </div>
-                            <div class="table-calender-row" *ngFor="let tm of Time; let i=index">
-                                <div class="tabel-calender-cell">{{tm.name}}</div>
-                                <div class="tabel-calender-cell">
-                                        <app-meeting-card [parentID]="1" [timeName]=tm.name ></app-meeting-card>
-                                    </div>
-                               
-                                   <div class="tabel-calender-cell">
-                              
-                            
-                                    <app-meeting-card [parentID]="2" [timeName]=tm.name ></app-meeting-card>
-                                   
-                                </div>
-                                    <div class="tabel-calender-cell">
-                                   
-                              
-                                    <app-meeting-card [parentID]="3" [timeName]=tm.name ></app-meeting-card>
-                              
-                                </div>
-                                    <div class="tabel-calender-cell">
-                                    <app-meeting-card [parentID]="4" [timeName]=tm.name ></app-meeting-card>
-                                </div>
-                                    <div class="tabel-calender-cell">
+<div class="row">
+    <div class="col-md-12">
+        <div class="box table-responsive">
+            <div class="col-md-6">
+                <h1 class="title">Digital Release Board <small>- Release Live Status and Metrics</small></h1>
+            </div>
+            <div class="col-md-6 text-right">
+                <button type="submit" class="btn btn-primary" (click)="onClick()">Next</button>
+            </div>
+            <div class="tabel-calender">
+                <div class="table-calender-row bgdark">
+                    <div class="tabel-calender-cell"></div>
+                    <div *ngFor="let sb of WeekDay; let j=index" class="tabel-calender-cell">
+                        {{sb.name}} <span class="total-number blink_me">{{getCount(sb.id)}}</span><br /><small>{{sb.dt}}</small>
+                    </div>
+                </div>
+                <div class="table-calender-row" *ngFor="let tm of Time; let i=index">
+                    <div class="tabel-calender-cell">{{tm.name}}</div>
+                    <div class="tabel-calender-cell">
+                        <app-meeting-card [parentID]="1" [timeName]=tm.name></app-meeting-card>
+                    </div>
+                    <div class="tabel-calender-cell">
+                        <app-meeting-card [parentID]="2" [timeName]=tm.name></app-meeting-card>
+                    </div>
+                    <div class="tabel-calender-cell">
+                        <app-meeting-card [parentID]="3" [timeName]=tm.name></app-meeting-card>
+                    </div>
+                    <div class="tabel-calender-cell">
+                        <app-meeting-card [parentID]="4" [timeName]=tm.name></app-meeting-card>
+                    </div>
+                    <div class="tabel-calender-cell">
 
-                                    <app-meeting-card [parentID]="5" [timeName]=tm.name ></app-meeting-card>
-                                </div>
-                                    <div class="tabel-calender-cell">
-                                    <app-meeting-card [parentID]="6" [timeName]=tm.name ></app-meeting-card>
-                                </div>
-                                  <div class="tabel-calender-cell">
-                                    <app-meeting-card [parentID]="0" [timeName]=tm.name ></app-meeting-card>
-                                    </div>
-                                </div>
-
-
-                        </div>
+                        <app-meeting-card [parentID]="5" [timeName]=tm.name></app-meeting-card>
+                    </div>
+                    <div class="tabel-calender-cell">
+                        <app-meeting-card [parentID]="6" [timeName]=tm.name></app-meeting-card>
+                    </div>
+                    <div class="tabel-calender-cell">
+                        <app-meeting-card [parentID]="0" [timeName]=tm.name></app-meeting-card>
                     </div>
                 </div>
             </div>
