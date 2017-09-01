@@ -17,40 +17,35 @@ public test:any;
 public counter=1;
   ngOnInit() {
     this.getTimeDetail();
-    //     let timer = Observable.timer(2000,1000);
-    // timer.subscribe(t => this.tickerFunc(t));
+        let timer = Observable.timer(2000,1000);
+  timer.subscribe(t => this.tickerFunc(t));
 
   }
   tickerFunc(tick){
     console.log(this);
+      var dd=0;
+      var cc=0;
+       var tot;
          this.test.forEach(element => {
-                   this.totcount=this.test.length;
-
-           debugger
-
-           if(element.cnt==this.counter)
+                   tot=this.test.length;
+           cc++;
+           if(element.active1=="active")
             {
-              element.active1="active";
-              if (element.cnt<this.totcount-1)
-             element.cnt=element.cnt+1;
-              else if(element.cnt>this.totcount-1)
-             element.cnt=element.cnt-1;
-            
-            }
-            else
-              {
+              dd=cc;
               element.active1="";
-                if (element.cnt<this.totcount-1)
-             element.cnt=element.cnt+1;
-             else if(element.cnt>this.totcount-1)
-             element.cnt=element.cnt-1;
-
-          
-              }
+            }
          });
-    this.counter=this.counter+1;
+    if (dd==0)
+    this.test[0].active1="active";
+      if(tot>dd)
+      this.test[dd-1+1].active1="active";
+     if(tot==dd)
+       this.test[0].active1="active";
     this.ticks = tick
   }
+  isActive(url: string) {
+        return url === this.test[0];
+    }
   public getTimeDetail(){
     // this.test=[{releaseName:'test',color:'yellow',active:'active'},{releaseName:'test2',color:'green',active:''}];
      var cnt=0;
